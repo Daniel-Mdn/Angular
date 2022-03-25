@@ -1,0 +1,31 @@
+<div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="loguearse()">
+        <div class="row">
+                <div class="column">
+                    <label for="email">Email:</label>
+                </div>
+                <div class="column">
+                    <input type="text" formControlName="emailInput" required>
+                </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label for="password">Contraseña:</label>
+            </div>
+            <div class="column">
+                <input type="text" formControlName="passwordInput" required>
+            </div>
+
+
+        </div>
+        <div class="">
+            <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Iniciar Sesion</button>
+        </div>
+    </form> 
+    <div *ngIf="respuesta!=''">
+        <app-alerta [resp]="respuesta"></app-alerta>
+    </div>
+
+
+    
+</div>

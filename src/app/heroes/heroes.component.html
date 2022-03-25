@@ -1,0 +1,35 @@
+
+<div class="contanier">
+    <div class="form-group">
+        <label for="inputSearch">Buscador de heroes:</label>
+        <input type="search" (input)="searchHero($event)" class="form-control" id="inputSearch" placeholder="Ingrese un nombre o iniciales de heroe">
+        {{search}}
+    </div>
+
+    <div class="container">
+      <div class="row" *ngFor="let elemento of this.cols; let i=index;">
+        <div class="col" *ngFor="let hero of elemento;">
+          {{hero.id}}
+          {{getImageFromApi('a')}}
+          <img class="img-thumbnail" style="width:70%; height:70%" [src]="imageToShow" alt="Place image title" *ngIf="!isImageLoading; else noImageFound">
+          <ng-template #noImageFound>
+            <img src="fallbackImage.png" alt="Fallbackimage">
+          </ng-template>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            One of three columns
+          </div>
+          <div class="col-sm">
+            One of three columns
+          </div>
+          <div class="col-sm">
+            One of three columns
+          </div>
+        </div>
+      </div>
+
+</div>
