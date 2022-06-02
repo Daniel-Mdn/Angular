@@ -1,6 +1,6 @@
 # Challenge para aceleraccion del 01/05/2022
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+Puede ver el repositorio original en el que trabajamos con el equipo aqui: https://github.com/alkemyTech/OT191-angular.git
 
 ## Development server
 
